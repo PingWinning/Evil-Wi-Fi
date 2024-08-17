@@ -60,7 +60,7 @@
     <div class="progress-bar">
         <div class="progress-bar-fill" id="progress"></div>
     </div>
-    <p>Please do not turn off your router during the update.</p>
+    <p> Please do not turn off your router during the update.</p>
 </div>
 
 <script>
