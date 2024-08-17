@@ -13,13 +13,7 @@ The **Evil-Wi-Fi Phishing Simulation** is a white hat penetration testing tool d
 
 ## Project Structure
 
-/evil-Wi-Fi/
-├── index.php # Main page mimicking the router gateway
-├── process.php # Handles form submission and initiates the loading bar
-├── update.php # Displays a loading bar to simulate the update process
-├── MyPortal.php # Handles logging of credentials
-├── helper.php # Helper functions (optional)
-└── .logs # Hidden log file for captured data (automatically created)
+![image](https://github.com/user-attachments/assets/24a7edfa-29db-40d3-b5a0-a5dba311b9af)
 
 ## Usage
 
