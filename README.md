@@ -11,8 +11,9 @@ The **Evil-Wi-Fi Phishing Simulation** is a white hat penetration testing tool d
 - **Phishing Simulation**: Mimics a router gateway interface that displays a message requiring the user to enter their Wi-Fi password for a firmware update.
 - **Data Logging**: Captures and logs submitted passwords, along with metadata such as the user's IP address, in a hidden `.logs` file for analysis.
 - **Update Simulation**: After submission, the user is redirected to a page with a 5-minute loading bar that simulates a firmware update process.
-  ![image](https://github.com/user-attachments/assets/002123af-efee-4b5d-bcec-012f81ab4715)
 - **Responsive Design**: The interface is optimized for both small and large screens, ensuring a convincing experience across devices.
+
+![image](https://github.com/user-attachments/assets/002123af-efee-4b5d-bcec-012f81ab4715)
 
 ## Project Structure
 
