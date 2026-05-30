@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Updating Firmware...</title>
+    <style>
+        * { box-sizing: border-box; margin: 0; padding: 0; }
+        body {
+            font-family: Arial, sans-serif;
+            background: #f7f7f7;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            padding: 20px;
+        }
+        .container {
+            background: #fff;
+            padding: 36px 24px;
+            border-radius: 10px;
+            box-shadow: 0 2px 12px rgba(0,0,0,0.12);
+            width: 100%;
+            max-width: 420px;
+            text-align: center;
+        }
+        .spinner {
+            width: 52px;
+            height: 52px;
+            border: 5px solid #e0e0e0;
+            border-top-color: #007BFF;
+            border-radius: 50%;
+            animation: spin 1s linear infinite;
+            margin: 0 auto 24px;
+        }
+        @keyframes spin { to { transform: rotate(360deg); } }
+        h2 {
+            font-size: 20px;
+            color: #222;
+            margin-bottom: 10px;
+        }
+        p {
+            font-size: 14px;
+            color: #666;
+            margin-bottom: 20px;
+            line-height: 1.5;
+        }
+        .progress-bar {
+            width: 100%;
+            background: #f0f0f0;
+            border-radius: 8px;
+            height: 12px;
+            overflow: hidden;
+            margin-bottom: 10px;
+        }
+        .progress-fill {
+            height: 100%;
+            width: 0;
+            background: linear-gradient(90deg, #007BFF, #00c6ff);
+            border-radius: 8px;
+            transition: width 300s linear;
+        }
+        .progress-label {
+            font-size: 12px;
+            color: #999;
+        }
+        .warning {
+            margin-top: 24px;
+            padding: 10px 14px;
+            background: #fff8e1;
+            border-left: 3px solid #ffc107;
+            border-radius: 4px;
+            font-size: 13px;
+            color: #7a6000;
+            text-align: left;
+        }
+    </style>
+</head>
+<body>
+<div class="container">
+    <div class="spinner"></div>
+    <h2>Updating Firmware...</h2>
+    <p>Your router is applying a security update. This may take up to 5 minutes.</p>
+    <div class="progress-bar">
+        <div class="progress-fill" id="bar"></div>
+    </div>
+    <div class="progress-label" id="pct">0%</div>
+    <div class="warning">
+        Do <strong>not</strong> turn off your router or disconnect from Wi-Fi during this process.
+    </div>
+</div>
+<script>
+    var bar = document.getElementById('bar');
+    var pct = document.getElementById('pct');
+    var start = Date.now();
+    var duration = 300000; // 5 min
+
+    function tick() {
+        var elapsed = Date.now() - start;
+        var p = Math.min(100, Math.floor((elapsed / duration) * 100));
+        bar.style.width = p + '%';
+        pct.textContent = p + '%';
+        if (p < 100) requestAnimationFrame(tick);
+    }
+
+    window.onload = function () {
+        bar.style.width = '100%'; // trigger CSS transition
+        tick();
+    };
+</script>
+</body>
+</html>

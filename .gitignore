@@ -1,0 +1,22 @@
+# ── Captured credentials — never commit these ──────────────────────────
+logs/*.log
+logs/*.txt
+
+# ── Claude project files ────────────────────────────────────────────────
+.claude/
+
+# ── Python bytecode ─────────────────────────────────────────────────────
+__pycache__/
+*.py[cod]
+
+# ── Temp files created by the tool at runtime ───────────────────────────
+/tmp/evil_hostapd_*
+/tmp/evil_dnsmasq_*
+/tmp/evil_wifi_dnsmasq.leases
+
+# ── OS / editor noise ───────────────────────────────────────────────────
+.DS_Store
+Thumbs.db
+*.swp
+*.swo
+.env

